@@ -1,0 +1,204 @@
+% Awesome Academic CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/shellywhen/Academic-CV-Template-LaTex
+%
+% Author:
+% shellywhen
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+% Section: Publication
+
+\sectionTitle{Publication}{\faBook}
+
+\newcommand{\yrfill}{}
+\vspace{4pt}
+\textcolor{basecolor}{\textbf{Journal Articles}}
+
+
+\newcounter{journalCounter}
+\setcounter{journalCounter}{3}  % Start at (N-1) journal articles
+\def\journalCounterautorefname{J\!}
+
+\newcommand{\journal}[3]{%
+\refstepcounter{journalCounter}
+  \item[{\makebox[2.6em][r]{#1}\hspace{.8em}J\thejournalCounter}]
+  #2 #3
+  \addtocounter{journalCounter}{-2}
+}
+
+
+
+\begin{enumerate}[leftmargin=5.6em, labelwidth=4.8em, align=left, labelsep=0.8em, itemindent=0em, listparindent=0em, parsep=0.8em]
+\renewcommand{\itemautorefname}{J\negthinspace}
+\journal{2026}{\textbf{Tea Leaves and Tensor Weights: Ritualized Prompts for Reflective AI Ideation}\\
+\textbf{Riley Park}, Mina Alvarez, Dev Raman\\
+\textit{ACM Transactions on Computer-Human Interaction}\\
+\doi{10.00000.000}}{\label{journal:tealeaves}}
+
+\journal{2025}{\textbf{Polite Panic Buttons: Designing Graceful Interruptions for Over-Eager Copilots}\\
+\textbf{Riley Park}, Jordan Ng, Samir Patel\\
+\textit{IEEE Transactions on Visualization and Computer Graphics}\\
+\doi{10.00000.000}}{\label{journal:panic}}
+
+\journal{\yrfill}{\textbf{A Field Guide to Mischievous Dashboards: Debugging Narrative Visualizations in the Wild}\\
+\textbf{Riley Park}, Nora Kim, Asha Menon\\
+\textit{Information Visualization}\\
+\doi{10.00000.000}}{\label{journal:mischief}}
+
+\journal{\yrfill}{\textbf{Keyboard Cat as Co-Author: Improvisational Writing Prompts for Human-AI Reflection}\\
+\textbf{Riley Park}, Tessa Yu, Omar Silva\\
+\textit{International Journal of Human-Computer Studies}\\
+\doi{10.00000.000}}{\label{journal:keyboardcat}}
+
+\end{enumerate}
+
+\textcolor{basecolor}{\textbf{Conference Proceedings}}
+
+\newcounter{confCounter}
+\setcounter{confCounter}{8}  % Start at (N-1) conference proceedings
+\def\confCounterautorefname{C\!}
+
+
+\newcommand{\conf}[2]{%
+ \refstepcounter{confCounter}%
+  \item[{\makebox[2.6em][r]{#1}\hspace{.5em}C\theconfCounter}]#2%
+  \addtocounter{confCounter}{-2}%
+}
+
+
+\begin{enumerate}[leftmargin=5.6em, labelwidth=4.8em, align=left, labelsep=0.8em, itemindent=0em, listparindent=0em, parsep=0.8em]
+\conf{2026}{\textbf{Prompt Karaoke: Real-Time Co-Authoring with AI Through Turn-Taking Lyrics}\\
+\textbf{Riley Park}, Imani Brooks, Theo Lin\\
+CHI' 26: {\it ACM Conference on Human Factors in Computing Systems}\\
+\doi{10.00000.000}\label{pub:karaoke}}
+
+\conf{\yrfill}{\textbf{Nudge, Wink, and Explain: Micro-Interactions for Trustworthy Copilot Suggestions}\\
+\textbf{Riley Park}, Omar Silva, Jia Chen\\
+UIST' 26: {\it ACM Symposium on User Interface Software and Technology}\\
+\doi{10.00000.000}\label{pub:nudgewink}}
+
+\conf{2025}{\textbf{Ctrl+Zebra: Undoing AI Hallucinations in Creative Coding Environments}\\
+\awardmark{\faTrophy}\textbf{Riley Park}, Lena Ortiz, Priya Natarajan\\
+DIS' 25: {\it ACM Designing Interactive Systems Conference}\\
+\doi{10.00000.000}\\
+\textcolor{accentcolor}{\textbf{Best Paper Award}} \label{pub:zebra}}
+
+\conf{2024}{\textbf{The Surprisingly Serious Button: Playful Affordances for High-Stakes Human-AI Decisions}\\
+\awardmark{\faAward}\textbf{Riley Park}, Marcus Lee, Faye Donnelly\\
+CSCW' 24: {\it ACM Conference on Computer-Supported Cooperative Work}\\
+\doi{10.00000.000}\\
+\textcolor{accentcolor}{\textbf{Best Paper Honorable Mention Award}} \label{pub:seriousbutton}}
+
+\conf{2023}{\textbf{Chartreuse: Turning Sticky Notes into Living Visual Analytics}\\
+\awardmark{\faMedal}\textbf{Riley Park}, Mina Alvarez, Dev Raman\\
+CHI' 23: {\it ACM Conference on Human Factors in Computing Systems}\\
+\doi{10.00000.000}\\
+\textcolor{accentcolor}{\textbf{Best Paper Honorable Mention}} \label{pub:chartreuse}}
+
+\conf{2022}{\textbf{Ghost Cursor: Revealing Invisible Collaboration in Shared AI Workspaces}\\
+\textbf{Riley Park}, Samir Patel, Nora Kim\\
+IUI' 22: {\it ACM Conference on Intelligent User Interfaces}\\
+\doi{10.00000.000}\label{pub:ghostcursor}}
+
+\conf{2021}{\textbf{Measure the Mischief: Visual Diagnostics for Unruly Recommendation Models}\\
+\awardmark{\faCertificate}\textbf{Riley Park}, Jordan Ng, Asha Menon\\
+AVI' 21: {\it International Conference on Advanced Visual Interfaces}\\
+\doi{10.00000.000}\\
+\textcolor{accentcolor}{\textbf{IEEE Open-Source Badge}} \label{pub:mischiefmodel}}
+
+\conf{2020}{\textbf{Oops, All Personas: Playful Role-Play Methods for Co-Creating with Language Models}\\
+\textbf{Riley Park}, Amina Farouk, Lena Ortiz\\
+C\&C' 20: {\it ACM Creativity \& Cognition Conference}\\
+\doi{10.00000.000}\label{pub:oopspersonas}}
+
+\conf{2019}{\textbf{Ctrl+Snack: Snackable Notation Designs for Explainable AI Prototyping}\\
+\textbf{Riley Park}, Jingyi Zhou, Marcus Lee\\
+VL/HCC' 19: {\it IEEE Symposium on Visual Languages and Human-Centric Computing}\\
+\doi{10.00000.000}\label{pub:ctrlsnack}}
+\end{enumerate}
+
+\textcolor{basecolor}{\textbf{Books and Chapters}}
+
+\newcounter{bookCounter}
+\setcounter{bookCounter}{0}  % Start at (N-1) books
+\def\bookCounterautorefname{B\!}
+
+\newcommand{\book}[2]{%
+ \refstepcounter{bookCounter}
+  \item[{\makebox[2.6em][r]{#1}\hspace{.35em}B\thebookCounter}] #2%
+  \addtocounter{bookCounter}{-2}
+}
+
+\begin{enumerate}[leftmargin=5.6em, labelwidth=4.8em, align=left, labelsep=0.8em, itemindent=0em, listparindent=0em, parsep=0.8em]
+\book{2025}{\textbf{Playful Human-AI Interaction: Methods, Mischief, and Meaning}\\
+\textbf{Riley Park}\\
+MIT Press\\
+\doi{10.00000.000}\label{book:playfulhai}}
+\end{enumerate}
+
+
+
+
+
+
+\textcolor{basecolor}{\textbf{Preprints}}
+
+\newcounter{manuCounter}
+\setcounter{manuCounter}{0}  % Start at (N-1) manuscripts
+\def\manuCounterautorefname{M\!}
+
+\newcommand{\manu}[2]{%
+ \refstepcounter{manuCounter} 
+  \item[{\makebox[2.6em][r]{#1}\hspace{.35em}M\themanuCounter}] #2%
+  \addtocounter{manuCounter}{-2}
+}
+  
+\begin{enumerate}[leftmargin=5.6em, labelwidth=4.8em, align=left, labelsep=0.8em, itemindent=0em, listparindent=0em, parsep=0.8em]
+
+\manu{2025}{\textbf{Storyboard Signals: Orchestrating Generative Motion Snippets for Expressive Data Narratives}\\
+\textbf{Riley Park}, Amina Farouk, Theo Lin, Xinyi Wang\\
+{\it Under Review}\\
+\arxiv{2500.0000}\\
+\label{pub:datasway}}
+
+\end{enumerate}
+
+\textcolor{basecolor}{\textbf{Workshop \& Position Papers, Posters \& Reports}}
+
+\newcounter{posterCounter}
+\setcounter{posterCounter}{3}  % Start at (N-1) entries
+\def\posterCounterautorefname{P\!}
+
+\newcommand{\posterreport}[2]{%
+ \refstepcounter{posterCounter}
+  \item[{\makebox[2.6em][r]{#1}\hspace{.35em}P\theposterCounter}] #2%
+  \addtocounter{posterCounter}{-2}
+}
+
+\begin{enumerate}[leftmargin=5.6em, labelwidth=4.8em, align=left, labelsep=0.8em, itemindent=0em, listparindent=0em, parsep=0.8em]
+\posterreport{2025}{\textbf{From Prompt to Protocol: Positioning Reflective Friction as a Core Design Primitive in Human-AI Systems}\\
+\textbf{Riley Park}, Imani Brooks\\
+CHI 2025 Workshop on Human-AI Co-Creation\\
+\doi{10.00000.000}\label{pub:frictionprotocol}}
+
+\posterreport{2024}{\textbf{Tiny Rituals, Big Effects: Workshop Paper on Playful Guardrails for Everyday Copilot Use}\\
+\textbf{Riley Park}, Amina Farouk, Theo Lin\\
+UIST 2024 Workshop on Interactive Foundation Models\\
+\doi{10.00000.000}\label{pub:tinyrituals}}
+
+\posterreport{2024}{\textbf{Prompt Breadcrumbs: A Poster on Transparent AI-Assisted Writing Traces}\\
+\textbf{Riley Park}, Jonah Singh\\
+ACM Conference on Human Factors in Computing Systems Extended Abstracts (Poster)\\
+\doi{10.00000.000}\label{pub:breadcrumbs}}
+
+\posterreport{2023}{\textbf{Civic Notebook Patterns: Technical Report on Public-Sector Human-AI Dashboard Workflows}\\
+\textbf{Riley Park}, Nora Kim, Samir Patel\\
+Brookhaven University Technical Report Series\\
+\doi{10.00000.000}\label{pub:civicnotebook}}
+\end{enumerate}
+
+
+
+

@@ -1,0 +1,129 @@
+% Awesome Academic CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/shellywhen/Academic-CV-Template-LaTex
+%
+% Author:
+% shellywhen
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+% Section: Professional Service
+
+\sectionTitle{Professional Service}{\faHandshake}
+
+\textcolor{basecolor}{\textbf{Program Committee}}
+\vspace{-2pt}
+
+\begin{itemize}[leftmargin=1.4em]
+  \item ACM Conference on Human Factors in Computing Systems \yr{2025-26}
+  \item ACM Symposium on User Interface Software and Technology \yr{2024-26}
+  \item ACM Conference on Intelligent User Interfaces \yr{2023-26}
+  \item ACM Designing Interactive Systems Conference \yr{2024-26}
+\end{itemize}
+\vspace{4pt}
+
+\textcolor{basecolor}{\textbf{Organizing Committee}}
+\vspace{-2pt}
+
+\begin{itemize}[leftmargin=1.4em]
+  \item Organizing Committee, ACM Conference on Human Factors in Computing Systems Workshop on Human-AI Co-Creation \yr{2025-26}
+  \item Organizing Committee, ACM Symposium on User Interface Software and Technology Workshop on Interactive Foundation Models \yr{2024}
+  \item Organizing Committee, IEEE Symposium on Visual Languages and Human-Centric Computing Workshop on Creative Coding with AI \yr{2025}
+\end{itemize}
+
+\definecolor{sparkspikecolor}{named}{lighttext}
+\newcommand{\reviewCountMax}{16}  % please manually update the max number of reviews for the year
+\newcommand{\reviewPointCount}{6}
+\newcommand{\reviewXMin}{0.06}
+\newcommand{\reviewXMax}{0.89}  % update the x max range for longer year range
+\newcommand{\reviewSparkSpike}[2]{%
+  {%
+    \pgfmoveto{\pgforigin}%
+    \pgfsetlinewidth{\sparkspikewidth}%
+    \pgfsetstrokecolor{sparkspikecolor}%
+    \pgfmoveto{\pgfxy(#1, 0)}%
+    \pgflineto{\pgfxy(#1, #2)}%
+    \pgfusepath{stroke}%
+  }%
+}
+\newcommand{\reviewSpikeAt}[2]{%
+  \edef\reviewX{\fpeval{\reviewXMin + ((#1-1) * (\reviewXMax-\reviewXMin) / (\reviewPointCount-1))}}%
+  \edef\reviewHeight{\fpeval{#2/\reviewCountMax}}%
+  \reviewSparkSpike{\reviewX}{\reviewHeight}%
+}
+
+\textcolor{basecolor}{\textbf{Peer Reviewing}\ \ }\textcolor{lighttext}{62 full papers\ \ {\scriptsize 2021}}
+\begin{sparkline}{6}
+\setlength\sparkbottomlinethickness{0.1pt} 
+    \reviewSpikeAt{1}{3}
+    \reviewSpikeAt{2}{5}
+    \reviewSpikeAt{3}{9}
+    \reviewSpikeAt{4}{12}
+    \reviewSpikeAt{5}{16}
+    \reviewSpikeAt{6}{13}
+     \sparkbottomline[1] 
+\end{sparkline}
+\textcolor{lighttext}{{\scriptsize 2026}} 
+
+I review for journals and conferences mainly in HCI and visualization, with occasional review work in AI ethics and design research.
+
+\textbf{Journal}
+\begin{itemize}[leftmargin=1.4em]
+  \item ACM Transactions on Computer-Human Interaction
+  \item IEEE Transactions on Visualization and Computer Graphics
+  \item International Journal of Human-Computer Studies
+\end{itemize}
+
+\textbf{Conference}
+\begin{itemize}[leftmargin=1.4em]
+  \item ACM Conference on Human Factors in Computing Systems \yr{2022-26}
+  \item ACM Symposium on User Interface Software and Technology \yr{2023-26}
+  \item ACM Designing Interactive Systems Conference \yr{2022-26}
+  \item ACM Conference on Intelligent User Interfaces \yr{2021-26}
+  \item ACM Conference on Computer-Supported Cooperative Work \yr{2023-25}
+  \item IEEE Visualization Conference \yr{2023-26}
+  \item ACM Creativity \& Cognition Conference \yr{2024-25}
+\end{itemize}
+
+\textbf{Workshop}
+\begin{itemize}[leftmargin=1.4em]
+  \item ACM Conference on Human Factors in Computing Systems Workshop on Human-AI Co-Creation \yr{2025-26}
+  \item ACM Symposium on User Interface Software and Technology Workshop on Interactive Foundation Models \yr{2024}
+\end{itemize}
+
+
+{\color{basecolor!50}{\faIcon{star}}} \textbf{Special Recognitions for Outstanding Reviews}:
+\vspace{-.5\baselineskip}
+\begin{itemize}[leftmargin=1.4em]
+  \item ACM Conference on Human Factors in Computing Systems (2026, $\times$2)
+  \item ACM Symposium on User Interface Software and Technology (2025)
+  \item ACM Conference on Human Factors in Computing Systems (2025)
+  \item ACM Designing Interactive Systems Conference (2025)
+  \item ACM Conference on Computer-Supported Cooperative Work (2024)
+\end{itemize}
+
+
+
+\vspace{0.5\rowgap}
+\textcolor{basecolor}{\textbf{Community}}
+
+\begin{itemize}[leftmargin=1.4em]
+  \item Faculty Advisor, HCI Graduate Collective, Brookhaven University, 2024-Present
+  \item Organized mentorship circles, annual demo day, and interdisciplinary design jams
+\end{itemize}
+
+\textcolor{basecolor}{\textbf{Session Chair}}
+\begin{itemize}[leftmargin=1.4em]
+  \item ACM Conference on Human Factors in Computing Systems (2025), \textit{Designing with Generative Systems}
+  \item ACM Designing Interactive Systems Conference (2024), \textit{Creative AI Tools}
+\end{itemize}
+
+
+\textcolor{basecolor}{\textbf{Volunteer}}
+\begin{itemize}[leftmargin=1.4em]
+  \item ACM Conference on Human Factors in Computing Systems (2023)
+  \item IEEE Visualization Conference (2022)
+  \item ACM Symposium on User Interface Software and Technology (2021)
+\end{itemize}
+\vspace{12pt}

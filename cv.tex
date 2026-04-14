@@ -1,0 +1,77 @@
+% !TEX TS-program = lualatex
+% Awesome Academic CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/shellywhen/Academic-CV-Template-LaTex
+%
+% Author:
+% shellywhen
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+\documentclass[localFont,alternative]{awesome-academic-cv}
+
+\geometry{left=2cm, top=1.75cm, right=2cm, bottom=2cm, footskip=1.15cm}
+\name{Riley}{Park}
+\tagline{}
+\photo{2.5cm}{face.png}
+
+\socialinfo{
+    % \address{742 Meridian Row, Brookhaven, NY 11790}
+    \website{rileypark-hci.example}
+    \email{riley.park@example.edu}
+    \linkedin{riley-park-hci}
+    \gscholar{TemplateScholarID1234}
+    \twitter{riley-park-hci}
+    \github{riley-park-hci}
+}
+
+% Theme colors
+\definecolor{myred}{HTML}{ad0002}
+\definecolor{basecolor}{HTML}{227FC1}
+\colorlet{linkcolor}{basecolor}
+\colorlet{accentcolor}{linkcolor!90}
+\colorlet{symbolcolor}{linkcolor!85}
+
+% Utilities
+\usepackage{etaremune}
+
+\begin{document}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\NoAutoSpacing
+\makecvheader
+
+\makecvfooter
+    {\textcolor{linkcolor!50}{Latest Update: \selectlanguage{english}\today}} 
+    {\textcolor{linkcolor!50}{Riley Park\ \cdot \ {\small\textsc{Curriculum Vitae}}}}
+    {\textcolor{linkcolor!50}{\thepage/\cvtotalpages}}
+
+\cvsectionfile{research}
+
+\cvsectionfile{education}
+
+\cvsectionfile{experience}
+
+\cvsectionfile{publication}
+
+\cvsectionfile{award}
+
+\cvsectionfile{funding}
+
+\cvsectionfile{service}
+
+\cvsectionfile{teaching}
+
+\cvsectionfile{advisee}
+
+\cvsectionfile{talk}
+
+\cvsectionfile{media}
+
+\cvsectionfile{skill}
+
+\cvsectionfile{referee}
+
+\end{document}
