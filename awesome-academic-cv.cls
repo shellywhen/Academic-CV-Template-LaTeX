@@ -12,7 +12,7 @@
 % version 2005/12/01 or later.
 %
 % This file awesome-academic-cv.cls that can be downloaded from:
-% https://github.com/shellywhen/Academic-CV-Template-LaTex/
+% https://github.com/shellywhen/Academic-CV-Template-LaTeX
 
 \ProvidesClass{awesome-academic-cv}[2026/04/15  v1.0.0 'Awesome Academic CV' Class]
 
