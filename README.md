@@ -3,6 +3,10 @@
 - [Preview Example PDF](https://shellywhen.github.io/Academic-CV-Template-LaTex/cv.pdf)
 - [Author's Personal CV](https://drive.google.com/file/d/1cYB9J2DYccJAI2GCS5dcuItK9mnL9FBk/view)
 
+| Page 1 | Page 2 |
+|:--|:--|
+| ![](https://shellywhen.github.io/Academic-CV-Template-LaTex/examples/p1-awesome-academic-cv.jpg)| ![](https://shellywhen.github.io/Academic-CV-Template-LaTex/examples/p2-awesome-academic-cv.jpg)|
+
 
 ## About
 
@@ -56,12 +60,10 @@ Use the `experiences` environment and `\experience` entries (see class file for 
 \end{experiences}
 ```
 
-Separate multiple jobs with `\emptySeparator` if needed.
-
 ## License
 
-- **`awesome-academic-cv.cls`** and inherited layout code follow the [**LaTeX Project Public License (LPPL) 1.3c**](https://www.latex-project.org/lppl.txt), consistent with the upstream Awesome Source CV lineage.
-- **Section content and documentation** in this repository may be used under [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/legalcode) where applicable; always credit shellywhen for this fork and Christophe Roger/YAAC: Another Awesome CV for the underlying template.
+- **`awesome-academic-cv.cls`** and inherited layout code follow the [LaTeX Project Public License (LPPL) 1.3c](https://www.latex-project.org/lppl.txt), consistent with the upstream Awesome Source CV lineage.
+- **Section content and documentation** in this repository may be used under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) where applicable; always credit shellywhen for this fork and Christophe Roger/YAAC: Another Awesome CV for the underlying template.
 - **Dependencies**
   - `sparkline.sty` by Andreas Loeffler
   - `gradient-text.sty` by Sicheng Du

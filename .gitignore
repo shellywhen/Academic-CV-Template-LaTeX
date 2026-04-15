@@ -1,0 +1,23 @@
+.DS_Store
+
+# LaTeX auxiliary/build files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.xdv
+
+# Latexmk outputs
+*.dvi
+*.ps

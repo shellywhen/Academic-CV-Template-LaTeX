@@ -1,37 +1,23 @@
-%% Copyright 2016 Christophe Roger
-%
-% Author: 
-% Christophe Roger (Darwiin)
+% Awesome Academic CV LaTeX Template
+% 
+% Author:
+% Liwenhan Xie (shellywhen)
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3c
 % of this license or (at your option) any later version.
 % The latest version of this license is in
-%   http://www.latex-project.org/lppl.txt
+% http://www.latex-project.org/lppl.txt
 % and version 1.3 or later is part of all distributions of LaTeX
 % version 2005/12/01 or later.
 %
-% This work has the LPPL maintenance status `maintained'.
-% 
-% The Current Maintainer of this work is M. C. Roger.
-%
-% This work consists of the files awesome-source-cv.cls 
+% This file awesome-academic-cv.cls that can be downloaded from:
+% https://github.com/shellywhen/Academic-CV-Template-LaTex/
 
-\ProvidesClass{awesome-academic-cv}[2026/05/01  v1.0.0 'Awesome Academic CV' Class]
+\ProvidesClass{awesome-academic-cv}[2026/04/15  v1.0.0 'Awesome Academic CV' Class]
 
 \newif\if@showLinks   \@showLinksfalse
 
-\DeclareOption{monochrome}{
-  \def\@monochrome{monochrome}
-}
-
-\DeclareOption{localFont}{
-  \def\@local{local}
-}
-
-\DeclareOption{alternative}{
-  \def\@alternative{alternate}
-}
 
 \DeclareOption{showLinks}{ \@showLinkstrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -59,31 +45,51 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{academicons}
 \RequirePackage{cite}
-\RequirePackage{gradient-text}
 \RequirePackage{multicol}
 \RequirePackage{tabularx}
-\RequirePackage{sparklines}
 \RequirePackage{multirow}
 \RequirePackage{amssymb}
 \RequirePackage{lastpage}
+% Load local asset packages when present; fallback to globally installed ones.
+% Use \input for local .sty files to avoid package-name mismatch warnings.
+\IfFileExists{assets/gradient-text.sty}{%
+  \input{assets/gradient-text.sty}%
+}{%
+  \RequirePackage{gradient-text}%
+}
+\IfFileExists{assets/sparklines.sty}{%
+  \input{assets/sparklines.sty}%
+}{%
+  \RequirePackage{sparklines}%
+}
 
 
 \DeclareUnicodeCharacter{00E9}{\'{e}}
 % Define default accent colors
 
 
-\providecolor{basecolor}{HTML}{461CAF}
-\providecolor{linkcolor}{HTML}{461CAF}
+\definecolor{basecolor}{HTML}{227FC1}
+\definecolor{linkcolor}{HTML}{227FC1}
 \providecolor{lightcolor}{HTML}{b7a5e5}
 \providecolor{lighttext}{HTML}{444444}
 \definecolor{darkGrey}{HTML}{989898}
 
-\colorlet{linkcolor}{basecolor}
-\colorlet{accentcolor}{linkcolor!90}
-\colorlet{symbolcolor}{linkcolor!85}
+% Set the template's base color and refresh derived theme colors.
+% Usage: \setbasecolor{461CAF}
+\newcommand*{\setbasecolor}[1]{%
+  \definecolor{basecolor}{HTML}{#1}%
+  \colorlet{accentcolor}{basecolor!90}%
+  \colorlet{symbolcolor}{basecolor!85}%
+}
 
-% Setup hyperref package, and colours for links
-%\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+% Set link color independently from base color.
+% Usage: \setlinkcolor{227FC1}
+\newcommand*{\setlinkcolor}[1]{%
+  \definecolor{linkcolor}{HTML}{#1}%
+}
+
+% Initialize the default theme palette.
+\setbasecolor{461CAF}
 
 \if@showLinks
   \hypersetup{%
@@ -118,7 +124,6 @@
 \linespread{1.1}\selectfont
 
 % Configure list
-% \setlist[itemize,1]{label=\faCaretRight, nosep, leftmargin=2em} 
 \setlist[itemize,1]{label=\bullet, nosep, leftmargin=1.2em} 
 \setlist[itemize,2]{label=\bullet, nosep, leftmargin=1.5em} 
 
@@ -132,15 +137,10 @@
 \defaultfontfeatures{Ligatures=TeX}
 %
 
-% Define font to use according to localFont option
-\ifdef{\@local}
-{
-  \setmainfont{MerriweatherRegular}[
+\setmainfont{MerriweatherRegular}[
     Path = fonts/,
     BoldFont = MerriweatherBold,
     ItalicFont = MerriweatherItalic]
-}
-{}
 
 
 %New length definition
@@ -188,8 +188,16 @@
 \newcommand{\socialtext}[2]{\mbox{\textcolor{symbolcolor}{#1}\hspace{0.5em}#2\hspace{1em}}}
 
 % Render a link with its symbol
-% Usage; \sociallink{<icon>}{<label>}
-\newcommand{\sociallink}[3]{\mbox{\hspace{0.5em}\link{#2}{\textcolor{symbolcolor}{#1 #3}}\hspace{1em}}}
+% Usage; \sociallink{<icon>}{<url>}{<label>}
+% Keep icon in theme color, but render link label with linkcolor.
+\newcommand{\sociallink}[3]{%
+  \mbox{%
+    \hspace{0.5em}%
+    \textcolor{symbolcolor}{#1}%
+    \ifstrempty{#3}{}{\,\link{#2}{#3}}%
+    \hspace{1em}%
+  }%
+}
 
 % Define author's name
 % Usage: \name{<firstname>}{<lastname>}
@@ -205,6 +213,7 @@
 % Define author's tagline
 % Usage: \tagline{<tag line>}
 \newcommand*{\tagline}[1]{\def\@tagline{#1}}
+\def\@tagline{}
 
 % Define author's photo
 % Usage \photo{<diameter>}{<photo>}
@@ -281,7 +290,7 @@
     \ifundef{\@photodiameter}{
       \begin{minipage}{\linewidth}
     }{
-      \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}
+      \begin{minipage}{\dimexpr\linewidth-\@photodiameter-3em}
     }
    
     \color{accentcolor}\user{\@firstname}{\@lastname}\color{black}\\
@@ -297,7 +306,7 @@
     \ifundef{\@photodiameter}{
       \begin{minipage}{\linewidth}
     }{
-      \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}
+      \begin{minipage}{\dimexpr\linewidth-\@photodiameter-3em}
     }
    
 
@@ -323,22 +332,6 @@
   \fancyfoot[C]{#2}
   \fancyfoot[R]{#3}
 }
-
-% Resume part title definition
-% \newcommand\sectionTitle[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace \textsc{#1}}{#1}}}
-
-% \newcommand\sectionTitle[2]{\section{\color{accentcolor}{\textbf{#1}}}}
-
-% \newcommand\sectionTitle[1]{
-%     \section{\color{accentcolor}{\textbf{#1}}} % Section title text
-%     \noindent
-%     \begin{tikzpicture}
-%         % Draw a gradient line that spans the full text width with specified colors and a thinner line
-%         \shade[left color={rgb:red,23; green,32; blue,204}, right color={rgb:red,198; green,11; blue,76}]
-%         (0,0) rectangle (\textwidth,0.01); % Use \textwidth for the length and 0.05 for a thinner height
-%     \end{tikzpicture}
-
-% }
 
 \newcommand\sectionTitle[2]{
     \section{\texorpdfstring{\color{accentcolor}#2\hspace{0.55em}\textbf{#1}}{#1}}
@@ -415,38 +408,6 @@
 
 \newcolumntype{Z}{>{\raggedleft}p{\pubyearcolumn}}
 
-% Define the 'scholarship' environment
-% \newenvironment{publication}{%
-%   \begin{longtable}{Z p{\publeftcolumn} p{\pubrightcolumnlength}}
-% }{%
-%   \end{longtable}
-% }
-
-% Render a scholarshipentry in the scolarship environment
-% Usage: \scholarshipentry{<date>}{<description>}
-\newcommand\publicationentry[2]{
-  #1    &  #2 \vspace{2pt}\\
-}
-
-% author title venue year url abbr
-
-% \newcommand\pubentry[7]{
-% #1. #4. \href{#5}{``#2''}. #3 (#6). #7
-    
-% }
-
-\newcommand\pubentry[7]{
-#1. #4. \href{#5}{``#2''}. #3 (#6). #7
-    
-}
-
-% Define the 'skills' environment
-% \newenvironment{skills}{%
-%   \begin{longtable}{@{}R{\leftcolumn} E@{}}
-% }{%
-%   \end{longtable}
-% }
-
 % Render a skill in the skills environment
 % Usage: \skill{<skill>}{<level>}
 \newcommand\skill[2]{
@@ -490,23 +451,6 @@
   \begin{longtable}{@{}l}
 }{%
   \end{longtable}
-}
-
-% Define the 'project' entry in the 'projects' environment
-% Usage:
-% \project
-%   {<Project name>}{<dates>}
-%   {<link1> <link2>}
-%   {<Project description>}
-%   {<techno1>,<techno2>}
-\newcommand\project[5]{
-  \begin{minipage}[t]{\dimexpr(\linewidth-.8em)}\textbf{#1} \hfill #2\\*
-    \begin{minipage}[t]{\linewidth}
-  					         #4
-                   \end{minipage}\smallskip\\
-    % \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
-  \end{minipage}
-  \\*
 }
 
 
