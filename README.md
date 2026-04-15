@@ -4,8 +4,8 @@
 - [Author's Personal CV](https://drive.google.com/file/d/1cYB9J2DYccJAI2GCS5dcuItK9mnL9FBk/view)
 
 | Page 1 | Page 2 |
-|:--|:--|
-| ![](https://shellywhen.github.io/Academic-CV-Template-LaTex/examples/p1-awesome-academic-cv.jpg)| ![](https://shellywhen.github.io/Academic-CV-Template-LaTex/examples/p2-awesome-academic-cv.jpg)|
+|:---:|:---:|
+| <img width=500 src="https://shellywhen.github.io/Academic-CV-Template-LaTex/examples/p1-awesome-academic-cv.jpg"/>| <img width=500 src="https://shellywhen.github.io/Academic-CV-Template-LaTex/examples/p2-awesome-academic-cv.jpg"/>|
 
 
 ## About
