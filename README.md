@@ -5,7 +5,7 @@
 
 | Page 1 | Page 2 |
 |:---:|:---:|
-| <img width=500 src="https://shellywhen.github.io/Academic-CV-Template-LaTex/examples/p1-awesome-academic-cv.jpg"/>| <img width=500 src="https://shellywhen.github.io/Academic-CV-Template-LaTex/examples/p2-awesome-academic-cv.jpg"/>|
+| <img width=500 src="https://shellywhen.github.io/Academic-CV-Template-LaTeX/examples/p1-awesome-academic-cv.jpg"/>| <img width=500 src="https://shellywhen.github.io/Academic-CV-Template-LaTeX/examples/p2-awesome-academic-cv.jpg"/>|
 
 
 ## About
